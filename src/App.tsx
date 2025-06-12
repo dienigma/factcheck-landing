@@ -1,11 +1,13 @@
 import './index.css';
 import Layout from './components/layout';
+import Hero from './components/hero';
+import SignupForm from './components/signup-form';
 
 function App() {
   return (
     <Layout
-      leftSection={<div>Left Section</div>}
-      rightSection={<div>Right Section</div>}
+      leftSection={<Hero />}
+      rightSection={<SignupForm />}
     />
   );
 }
