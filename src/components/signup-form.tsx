@@ -1,11 +1,16 @@
 export default function SignupForm() {
+  
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    window.location.href = 'https://app.loch.one/welcome';
+  };
   return (
     <div className="flex flex-col items-center justify-center h-full">
-      <div className="flex flex-col gap-4 items-center justify-center">
-        <h1 className="text-[39px] font-medium text-[#B0B1B3]">
-          <p>Sign up</p> <p>for exclusive access.</p>
+      <div className="flex flex-col items-start justify-center w-[365px]">
+        <h1 className="text-[39px] font-medium text-[#B0B1B3] mb-2">
+          <p>Sign up for</p> <p>exclusive access.</p>
         </h1>
-        <form className="flex flex-col items-center justify-center w-full gap-4">
+        <form className="flex flex-col items-center justify-center w-full gap-2" onSubmit={handleSubmit}>
           <input
             type="email"
             name="email"
@@ -15,11 +20,14 @@ export default function SignupForm() {
           />
           <button
             type="submit"
-            className="text-white text-base bg-[#19191A] rounded-md px-4 py-3 w-full h-[59px] cursor-pointer"
+            className="text-white text-base bg-[#19191A] rounded-md w-full h-[59px] cursor-pointer mt-2"
           >
-            Get Started
+            Get started
           </button>
         </form>
+        <p className="text-[#19191A] text-[16px] font-semibold mt-8">
+          You'll receive an email with an invite link to join.
+        </p>
       </div>
     </div>
   );

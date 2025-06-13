@@ -1,15 +1,90 @@
+import NotificationCard from './notification-card';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import { CarouselCard } from './carousel-card';
+
+function CarouselCardHeader({
+  iconSrc,
+  iconAlt,
+}: {
+  iconSrc: string;
+  iconAlt: string;
+}) {
+  return (
+    <div className="flex items-center justify-between">
+      <img src={iconSrc} alt={iconAlt} />
+      <img src={'/src/assets/checkmark.svg'} alt="checkmark icon" />
+    </div>
+  );
+}
+
+function MoneySelectCardBody() {
+  return (
+    <div className="flex flex-col items-start justify-center gap-4 font-medium text-[11.2px] text-[#19191A]">
+      <p>Notify me when any wallets move more than</p>
+      <img src="/src/assets/money-select.svg" alt="money select icon" />
+    </div>
+  );
+}
+
+function DaySelectCardBody() {
+  return (
+    <div className="flex flex-col items-start justify-center gap-4 font-medium text-[11.2px] text-[#19191A]">
+      <p>Notify me when any wallet dormant for</p>
+      <img src="/src/assets/day-select.svg" alt="day select icon" />
+      <p>becoms active</p>
+    </div>
+  );
+}
+
 export default function TopCarousel() {
   return (
-    <div>
-      <div>
-        <h2 className="text-[24px] font-medium text-[#B0B1B3]">
-          Top Movers
-        </h2>
-        <p>
-          Find out when a certain whale moves more than any preset amount
-          on-chain or when a dormant whale you care about becomes active.
-        </p>
-      </div>
+    <div
+      className="flex gap-4 w-[300px]"
+      style={{ boxShadow: 'inset 0 0 60px rgba(0,0,0,0.5)' }}
+    >
+      <Swiper
+        spaceBetween={8}
+        slidesPerView={1.5}
+        loop={true}
+        autoplay={{ delay: 1500, disableOnInteraction: false }}
+        modules={[Autoplay]}
+        effect="cards"
+        className="rounded-l-lg"
+
+      >
+        <SwiperSlide
+          className="!w-[189.69px]"
+        >
+          <NotificationCard />
+        </SwiperSlide>
+        <SwiperSlide
+          className="!w-[189.69px]"
+        >
+          <CarouselCard
+            header={
+              <CarouselCardHeader
+                iconSrc="/src/assets/bar-chart-2.svg"
+                iconAlt="bar chart icon"
+              />
+            }
+            body={<MoneySelectCardBody />}
+          />
+        </SwiperSlide>
+        <SwiperSlide
+          className="!w-[189.69px]"
+        >
+          <CarouselCard
+            header={
+              <CarouselCardHeader
+                iconSrc="/src/assets/clock.svg"
+                iconAlt="clock icon"
+              />
+            }
+            body={<DaySelectCardBody />}
+          />
+        </SwiperSlide>
+      </Swiper>
     </div>
   );
 }

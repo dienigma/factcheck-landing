@@ -1,4 +1,5 @@
 import './index.css';
+import 'swiper/css';
 import Layout from './components/layout';
 import Hero from './components/hero';
 import SignupForm from './components/signup-form';
