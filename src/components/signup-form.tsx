@@ -2,6 +2,13 @@ export default function SignupForm() {
   
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
+    const email = (form.elements.namedItem('email') as HTMLInputElement)?.value || '';
+    const emailRegex = /^[\w-.]+@[\w-]+\.[\w-]{2,}$/;
+    if (!emailRegex.test(email)) {
+      alert('Please enter a valid email address.');
+      return;
+    }
     window.location.href = 'https://app.loch.one/welcome';
   };
   return (

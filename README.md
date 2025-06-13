@@ -1,5 +1,9 @@
 # Factcheck Landing
 
+**Deployed link:** [https://factcheck-landing.vercel.app/](https://factcheck-landing.vercel.app/)
+
+**GitHub:** [https://github.com/dienigma/factcheck-landing](https://github.com/dienigma/factcheck-landing)
+
 A modern, responsive landing page for Factcheck, built with **React**, **TypeScript**, **Vite**, and **Tailwind CSS**.
 
 ## Features
