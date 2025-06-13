@@ -27,7 +27,7 @@ export default function Hero() {
       </div>
       {/* Fixed Loch SVG at bottom left of the page */}
       <img
-        src="/src/assets/loch.svg"
+        src="/loch.svg"
         alt="Loch logo"
         className="w-[60px] h-[60px] fixed left-0 bottom-0 ml-4 mb-4 z-50"
       />

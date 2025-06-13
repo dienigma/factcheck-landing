@@ -10,7 +10,7 @@ export default function Layout({
       className="flex items-center h-screen"
       style={{
         backgroundColor: '#18191B',
-        backgroundImage: 'url("/src/assets/bg.svg")',
+        backgroundImage: 'url("/bg.svg")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}

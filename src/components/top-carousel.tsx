@@ -13,7 +13,7 @@ function CarouselCardHeader({
   return (
     <div className="flex items-center justify-between">
       <img src={iconSrc} alt={iconAlt} />
-      <img src={'/src/assets/checkmark.svg'} alt="checkmark icon" />
+      <img src={'/checkmark.svg'} alt="checkmark icon" />
     </div>
   );
 }
@@ -22,7 +22,7 @@ function MoneySelectCardBody() {
   return (
     <div className="flex flex-col items-start justify-center gap-4 font-medium text-[11.2px] text-[#19191A]">
       <p>Notify me when any wallets move more than</p>
-      <img src="/src/assets/money-select.svg" alt="money select icon" />
+      <img src="/money-select.svg" alt="money select icon" />
     </div>
   );
 }
@@ -31,7 +31,7 @@ function DaySelectCardBody() {
   return (
     <div className="flex flex-col items-start justify-center gap-4 font-medium text-[11.2px] text-[#19191A]">
       <p>Notify me when any wallet dormant for</p>
-      <img src="/src/assets/day-select.svg" alt="day select icon" />
+      <img src="/day-select.svg" alt="day select icon" />
       <p>becoms active</p>
     </div>
   );
@@ -64,7 +64,7 @@ export default function TopCarousel() {
           <CarouselCard
             header={
               <CarouselCardHeader
-                iconSrc="/src/assets/bar-chart-2.svg"
+                iconSrc="/bar-chart-2.svg"
                 iconAlt="bar chart icon"
               />
             }
@@ -77,7 +77,7 @@ export default function TopCarousel() {
           <CarouselCard
             header={
               <CarouselCardHeader
-                iconSrc="/src/assets/clock.svg"
+                iconSrc="/clock.svg"
                 iconAlt="clock icon"
               />
             }

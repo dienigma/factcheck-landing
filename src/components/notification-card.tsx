@@ -6,7 +6,7 @@ export default function NotificationCard() {
       className="w-full h-full"
     >
       <div className="flex items-center justify-between">
-        <img src="/src/assets/notif-bell.svg" alt="notification bell icon" />
+        <img src="/notif-bell.svg" alt="notification bell icon" />
         <p className="text-[#19191A]">Save</p>
       </div>
       <div className="flex flex-col items-start justify-center">

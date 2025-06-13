@@ -3,10 +3,10 @@ import { Text, Title } from './ui/typography';
 export default function WhaleInsightsSection() {
   return (
     <div className="flex items-start justify-between mr-16 ml-0">
-      <img src="/src/assets/cohorts-1.svg" alt="cohort" />
+      <img src="/cohorts-1.svg" alt="cohort" />
       <div className="w-1/2 pl-10 mt-8">
         <div className="flex items-end justify-end mb-4">
-          <img src="/src/assets/eye.svg" alt="eye" />
+          <img src="/eye.svg" alt="eye" />
         </div>
         <Title className="mb-4 text-right">
           Watch what the
