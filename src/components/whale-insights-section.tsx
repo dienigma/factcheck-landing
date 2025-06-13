@@ -6,7 +6,7 @@ export default function WhaleInsightsSection() {
       <img src="/cohorts-1.svg" alt="cohort" className="w-full md:w-auto" />
       <div className="w-full md:w-1/2 md:pl-10 mt-6 md:mt-8">
         <div className="flex items-end justify-end mb-4">
-          <img src="/eye.svg" alt="eye" />
+          <img src="/eye-updated.svg" alt="eye" />
         </div>
         <Title className="mb-4 text-right">
           Watch what the
