@@ -1,54 +1,86 @@
-# React + TypeScript + Vite
+# Factcheck Landing
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive landing page for Factcheck, built with **React**, **TypeScript**, **Vite**, and **Tailwind CSS**.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚡️ Fast development with Vite
+- 🎨 Styled with Tailwind CSS
+- 🧩 Modular React components
+- 📧 Signup form for early access
+- 💬 Testimonial and notification sections
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- [Node.js](https://nodejs.org/) (v18 or newer recommended)
+- [pnpm](https://pnpm.io/) (or use npm/yarn, but pnpm is recommended)
+
+### Installation
+
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/your-username/factcheck-landing.git
+   cd factcheck-landing
+   ```
+
+2. **Install dependencies:**
+   ```sh
+   pnpm install
+   ```
+   Or use `npm install` or `yarn install` if you prefer.
+
+### Development
+
+To start the development server with hot reloading:
+```sh
+pnpm dev
+```
+Visit [http://localhost:5173](http://localhost:5173) to view the app.
+
+### Building for Production
+
+To build the app for production:
+```sh
+pnpm build
+```
+The output will be in the `dist/` directory.
+
+### Preview Production Build
+
+To locally preview the production build:
+```sh
+pnpm preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Linting
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+To run ESLint:
+```sh
+pnpm lint
 ```
+
+## Project Structure
+
+```
+.
+├── public/                # Static assets
+├── src/
+│   ├── components/        # React components
+│   ├── App.tsx            # Main app component
+│   ├── main.tsx           # Entry point
+│   └── index.css          # Tailwind and global styles
+├── index.html             # HTML template
+├── package.json           # Project metadata and scripts
+└── vite.config.ts         # Vite configuration
+```
+
+## Customization
+
+- **Tailwind CSS** is configured via `vite.config.ts` and used throughout the components.
+- Update the signup form endpoint in `src/components/signup-form.tsx` as needed.
+
+## License
+
+[MIT](LICENSE) (add a license file if you want to specify one)
