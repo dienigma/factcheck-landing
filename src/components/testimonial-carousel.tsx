@@ -3,10 +3,14 @@ import TestimonialCard from './testimonial-card';
 
 export default function TestimonialCarousel() {
   return (
-    <div className="w-max max-w-3xl">
+    <div className="flex justify-center w-full px-2 md:px-0 max-w-3xl mx-auto">
       <Swiper
-        spaceBetween={24}
+        spaceBetween={16}
         slidesPerView={2}
+        breakpoints={{
+          0: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+        }}
         style={{ width: '100%' }}
         grabCursor
       >
@@ -28,7 +32,7 @@ export default function TestimonialCarousel() {
           <TestimonialCard
             name="Shiv S"
             title="Co-Founder Magik Labs"
-            text="Managing my own portfolio is helpful and well designed. What’s really interesting is watching the whales though. No one else has made whale tracking so simple."
+            text="Managing my own portfolio is helpful and well designed. What's really interesting is watching the whales though. No one else has made whale tracking so simple."
           />
         </SwiperSlide>
       </Swiper>

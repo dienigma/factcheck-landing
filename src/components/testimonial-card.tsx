@@ -14,7 +14,7 @@ export default function TestimonialCard({
 }) {
   return (
     <Card
-      className={`bg-white rounded-xl p-4 text-left shadow-sm border min-w-[320px] max-w-[450px] h-[136px] ${
+      className={`bg-white rounded-xl p-2 md:p-4 text-left shadow-sm border min-w-[220px] max-w-[95vw] md:min-w-[320px] md:max-w-[450px] h-auto md:h-[136px] ${
         active ? 'border-[#2684FF] border-2' : 'border-[#E5E5E5]'
       }`}
     >

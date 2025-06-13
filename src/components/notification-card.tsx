@@ -15,7 +15,9 @@ export default function NotificationCard() {
         </p>
         <input
           type="text"
-          className="w-full p-2 rounded-[8.4px] border border-[#19191A]"
+          className="w-full p-2 rounded-[8.4px] border border-[#19191A] cursor-default"
+          readOnly
+          disabled
         />
       </div>
     </Card>

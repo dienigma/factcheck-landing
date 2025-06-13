@@ -2,11 +2,11 @@ import { Text, Title } from './ui/typography';
 
 export default function WhaleInsightsSection() {
   return (
-    <div className="flex items-start justify-between mr-16 ml-0">
-      <img src="/cohorts-1.svg" alt="cohort" />
-      <div className="w-1/2 pl-10 mt-8">
+    <div className="flex flex-col md:flex-row items-center md:items-start justify-between md:mr-16 md:ml-0 w-full gap-6 md:gap-0">
+      <img src="/cohorts-1.svg" alt="cohort" className="w-full md:w-auto" />
+      <div className="w-full md:w-1/2 md:pl-10 mt-6 md:mt-8">
         <div className="flex items-end justify-end mb-4">
-          <img src="/Eye.svg" alt="eye" />
+          <img src="/eye.svg" alt="eye" />
         </div>
         <Title className="mb-4 text-right">
           Watch what the
