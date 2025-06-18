@@ -42,11 +42,16 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      {/* Loch SVG: top left on mobile, bottom left on md+ */}
+      {/* Loch SVG: top right on mobile, bottom left on md+ */}
       <img
         src="/loch.svg"
         alt="Loch logo"
-        className="w-[60px] h-[60px] fixed left-0 top-0 md:bottom-0 md:top-auto ml-4 mt-4 md:mb-4 md:ml-4 z-50 hidden md:block"
+        className="w-[60px] h-[60px] fixed right-0 top-0 mr-4 mt-4 z-50 block md:hidden"
+      />
+      <img
+        src="/loch.svg"
+        alt="Loch logo"
+        className="w-[60px] h-[60px] fixed left-0 md:bottom-0 md:top-auto ml-4 mt-4 md:mb-4 md:ml-4 z-50 hidden md:block"
       />
     </div>
   );
