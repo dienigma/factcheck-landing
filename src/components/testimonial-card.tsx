@@ -14,15 +14,15 @@ export default function TestimonialCard({
 }) {
   return (
     <Card
-      className={`bg-white rounded-xl p-2 md:p-4 text-left shadow-sm border min-w-[220px] max-w-[95vw] md:min-w-[320px] md:max-w-[450px] h-auto md:h-[136px] ${
+      className={`bg-white rounded-xl py-2 pl-2 pr-[24px] md:p-4 text-left shadow-sm border max-w-[95vw] md:min-w-[320px] md:max-w-[450px] h-auto md:h-[136px] leading-[1.2] ${
         active ? 'border-[#2684FF] border-2' : 'border-[#E5E5E5]'
       }`}
     >
-      <div className="mb-2">
-        <span className="font-bold text-black">{name}</span>
-        <span className="ml-1 text-gray-400 text-sm">{title}</span>
+      <div className="mb-[20px]">
+        <span className="font-semibold text-black text-[16px] mr-2">{name}</span>
+        <span className="ml-1 text-gray-400 text-[13px]">{title}</span>
       </div>
-      <p className="text-black text-base leading-snug">{text}</p>
+      <p className="text-[#1D2129] text-base leading-[1.2] text-[16px]">{text}</p>
     </Card>
   );
 }
