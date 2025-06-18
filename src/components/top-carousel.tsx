@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import { CarouselCard } from './carousel-card';
 
-function CarouselCardHeader({
+export function CarouselCardHeader({
   iconSrc,
   iconAlt,
 }: {
@@ -11,25 +11,25 @@ function CarouselCardHeader({
   iconAlt: string;
 }) {
   return (
-    <div className="flex items-center justify-between">
+    <div className="flex items-start justify-between">
       <img src={iconSrc} alt={iconAlt} />
       <img src={'/checkmark.svg'} alt="checkmark icon" />
     </div>
   );
 }
 
-function MoneySelectCardBody() {
+export function MoneySelectCardBody() {
   return (
-    <div className="flex flex-col items-start justify-center gap-4 font-medium text-[11.2px] text-[#19191A]">
+    <div className="flex flex-col items-start justify-between mb-[10px] font-medium text-[11.2px] text-[#19191A] leading-[1.2] gap-1">
       <p>Notify me when any wallets move more than</p>
       <img src="/money-select.svg" alt="money select icon" />
     </div>
   );
 }
 
-function DaySelectCardBody() {
+export function DaySelectCardBody() {
   return (
-    <div className="flex flex-col items-start justify-center gap-4 font-medium text-[11.2px] text-[#19191A]">
+    <div className="flex flex-col items-start justify-between mb-[10px] font-medium text-[11.2px] text-[#19191A] leading-[1.2] gap-1">
       <p>Notify me when any wallet dormant for</p>
       <img src="/day-select.svg" alt="day select icon" />
       <p>becoms active</p>
@@ -48,7 +48,7 @@ export default function TopCarousel() {
       />
       <div className="flex gap-4 w-[300px]">
         <Swiper
-          spaceBetween={8}
+          spaceBetween={14}
           slidesPerView={1.5}
           loop={true}
           autoplay={{ delay: 1500, disableOnInteraction: false }}
@@ -56,10 +56,10 @@ export default function TopCarousel() {
           effect="cards"
           className="rounded-l-lg z-0"
         >
-          <SwiperSlide className="!w-[189.69px]">
+          <SwiperSlide className="!w-[189.69px] !h-[171.5px]">
             <NotificationCard />
           </SwiperSlide>
-          <SwiperSlide className="!w-[189.69px]">
+          <SwiperSlide className="!w-[189.69px] !h-[171.5px]">
             <CarouselCard
               header={
                 <CarouselCardHeader
@@ -70,7 +70,7 @@ export default function TopCarousel() {
               body={<MoneySelectCardBody />}
             />
           </SwiperSlide>
-          <SwiperSlide className="!w-[189.69px]">
+          <SwiperSlide className="!w-[189.69px] !h-[171.5px]">
             <CarouselCard
               header={
                 <CarouselCardHeader iconSrc="/clock.svg" iconAlt="clock icon" />
