@@ -7,13 +7,7 @@ export default function Layout({
 }) {
   return (
     <div
-      className="flex flex-col md:flex-row items-center h-auto md:h-screen"
-      style={{
-        backgroundColor: '#18191B',
-        backgroundImage: 'url("/bg.svg")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
+      className="flex flex-col md:flex-row items-center h-auto md:h-screen bg-[#18191B]"
     >
       <div className="w-full md:w-[55.6%] h-auto md:h-full overflow-y-auto overflow-x-hidden scrollbar-hide order-1 md:order-1 px-4 py-6 md:px-0 md:py-0">
         {leftSection}
